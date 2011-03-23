@@ -60,11 +60,11 @@
                 String twentyAtUserId = groupJSON.getString("twentyatUserId");
                 JSONArray friendsMappingArray = groupJSON.getJSONArray("friendsMappings");
                 int friendsMappingLenght = friendsMappingArray.length();
-                for(int j=0;j<friendsMappingLenght;j++)
-                {
+                for(int j=0;j<friendsMappingLenght;j++) {
                         JSONObject friendMapping = friendsMappingArray.getJSONObject(j);
                 }
-             }
+            }
+ 
 
             JSONArray contactArray = profileJSON.getJSONArray("contactPersons");
 	    List contacts = new ArrayList();
@@ -73,6 +73,7 @@
             {
                     JSONObject contactJSON = contactArray.getJSONObject(i);
             }
+            
             JSONArray messageArray = profileJSON.getJSONArray("messages");
 	    List messages = new ArrayList();
             int messagesLenght = messageArray.length();
@@ -83,7 +84,68 @@
 
     
 %>
- 
+
+
+<table border="1">
+    <thead>
+        <tr>
+            <th colspan="2">Register Data Display</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>First Name: </td>
+            <td><%=firstName%></td>
+        </tr>
+        <tr>
+            <td>Last Name: </td>
+            <td><%=lastName%></td>
+        </tr>
+        <tr>
+            <td>Middle Name: </td>
+            <td><%=middleName%></td>
+        </tr>
+        <tr>
+            <td>User Id: </td>
+            <td><%=userId%></td>
+        </tr>
+        <tr>
+            <td>Region:</td>
+            <td><%=region%></td>
+        </tr>
+        <tr>
+            <td>E-Mail</td>
+            <td><%=email1%> </td>
+        </tr>
+        <tr>
+            <td>Is Active:</td>
+            <td><%=isActive%></td>
+        </tr>
+        <tr>
+            <td>E-Mail</td>
+            <td><%=email1%> </td>
+        </tr>
+        <tr>
+            <td>Photo: </td>
+            <td><img src="<%=photo%>"></td>
+        </tr>
+        <tr>
+            <td>Friendly Name:</td>
+            <td><%=friendlyName %></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+
+
 <p>First Name:<%=firstName%> </p>
 <p>Last Name:<%=lastName%> </p>
 <p>Middle Name:<%=middleName%> </p>

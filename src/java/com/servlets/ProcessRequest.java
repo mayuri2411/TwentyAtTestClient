@@ -64,56 +64,7 @@ public class ProcessRequest extends HttpServlet {
                 session.setAttribute("registerdata", registerResponse);
              response.sendRedirect("http://localhost:8084/twentyat-register-test/displayRegisterData.jsp");
 
-           /*
-            JSONObject profileJSON = json.getJSONObject("profile");
-            String userId = profileJSON.getString("twentyatUserId");
-            String middleName = profileJSON.getString("middleName");
-            String region = profileJSON.getString("region");
-            String streetAddress = profileJSON.getString("streetAddress");
-            String lastName = profileJSON.getString("lastName");
-            Long facebookId = profileJSON.getLong("facebookId");
-            String friendlyName = profileJSON.getString("friendlyName");
-            String photo = profileJSON.getString("photo");
-            String country = profileJSON.getString("country");
-            Boolean isActive = profileJSON.getBoolean("isActive");
-            String postalCode = profileJSON.getString("postalCode");
-            String mobilePhone = profileJSON.getString("mobilePhone");
-            String email1 = profileJSON.getString("email");
-            String locality = profileJSON.getString("locality");
-            String firstName = profileJSON.getString("firstName");
-            JSONArray groupArray = profileJSON.getJSONArray("twentyatGroups");
-            List groups = new ArrayList();
-            int groupSize = groupArray.length();
-            for(int i=0;i<groupSize;i++)
-            {
-                JSONObject groupJSON = groupArray.getJSONObject(i);
-                Integer groupId = groupJSON.getInt("twentyatGroupId");
-                String groupName = groupJSON.getString("groupName");
-                String twentyAtUserId = groupJSON.getString("twentyatUserId");
-                JSONArray friendsMappingArray = groupJSON.getJSONArray("friendsMappings");
-                int friendsMappingLenght = friendsMappingArray.length();
-                for(int j=0;j<friendsMappingLenght;j++)
-                {
-                        JSONObject friendMapping = friendsMappingArray.getJSONObject(j);
-                }
-             }
-     	
-            JSONArray contactArray = profileJSON.getJSONArray("contactPersons");
-	    List contacts = new ArrayList();
-            int contactArrayLenght = contactArray.length();
-            for(int i=0;i<contactArrayLenght;i++)
-            {
-                    JSONObject contactJSON = contactArray.getJSONObject(i);
-            }
-            JSONArray messageArray = profileJSON.getJSONArray("messages");
-	    List messages = new ArrayList();
-            int messagesLenght = messageArray.length();
-            for(int i=0;i<messagesLenght;i++)
-            {
-                    JSONObject messageJSON = messageArray.getJSONObject(i);
-            }
-
-            */
+          
 	   }///end of if ok 
 
 

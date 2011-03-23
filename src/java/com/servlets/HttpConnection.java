@@ -14,11 +14,11 @@ import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-public class HttpConnection {
+ 
+public class HttpConnection { 
 
 	private static final HttpConnection INSTANCE = new HttpConnection();
-	private static String URL = "http://localhost:8080/twentyat-web/"; 
+	private static String URL = "http://ec2-50-16-41-243.compute-1.amazonaws.com:8080/twentyat-web/";
 	//private static Logger logger = Logger.getLogger("HttpConnection");
         
 	public static HttpConnection getInstance() {
@@ -37,13 +37,12 @@ public class HttpConnection {
         for(Entry<String, String> entry : params.entrySet()) {
         	String key = entry.getKey();
         	String value = entry.getValue();
-
                 System.out.println("========================");
                 System.out.println("Key=="+key+"value==="+value);
                 System.out.println("========================");
         	json.put(key, value);
         }
-                           
+
         StringEntity entity = new StringEntity(json.toString());
         httpPost.setEntity(entity);
 

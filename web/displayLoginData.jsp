@@ -15,24 +15,24 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Register Data Display</title>
+        <title>Login Data Display</title>
     </head>
     <body>
-        <h3>register data display....</h3>
+        <h3>Login successful!!!!</h3> 
 
 <%
- 
-    String registerResponse=(String)session.getAttribute("registerdata");
-    out.println("registerResponse===="+registerResponse);
-    if(registerResponse!=null){
-        out.println("Register Response Not Null");
-    } 
-     JSONObject json = new JSONObject(registerResponse);
+
+    String loginResponse=(String)session.getAttribute("logindata");
+    out.println("loginResponse===="+loginResponse);
+    if(loginResponse!=null){
+        out.println("Login Response Not Null");
+    }
+     JSONObject json = new JSONObject(loginResponse);
 
      JSONObject statusJSON = json.getJSONObject("status");
             String message = statusJSON.getString("message");
             out.println("Message==="+message);
-            
+
             JSONObject profileJSON = json.getJSONObject("profile");
             String userId = profileJSON.getString("twentyatUserId");
             String middleName = profileJSON.getString("middleName");
@@ -64,7 +64,7 @@
                         JSONObject friendMapping = friendsMappingArray.getJSONObject(j);
                 }
             }
- 
+
 
             JSONArray contactArray = profileJSON.getJSONArray("contactPersons");
 	    List contacts = new ArrayList();
@@ -73,7 +73,7 @@
             {
                     JSONObject contactJSON = contactArray.getJSONObject(i);
             }
-            
+
             JSONArray messageArray = profileJSON.getJSONArray("messages");
 	    List messages = new ArrayList();
             int messagesLenght = messageArray.length();
@@ -82,14 +82,14 @@
                     JSONObject messageJSON = messageArray.getJSONObject(i);
             }
 
-    
+
 %>
 
 
 <table border="1">
     <thead>
         <tr>
-            <th colspan="2">Register Data Display</th>
+            <th colspan="2">Login Data Display</th>
 
         </tr>
     </thead>
@@ -149,13 +149,13 @@
 <p>First Name:<%=firstName%> </p>
 <p>Last Name:<%=lastName%> </p>
 <p>Middle Name:<%=middleName%> </p>
-<p>TwentAy UserId:<%=userId%> </p> 
+<p>TwentAy UserId:<%=userId%> </p>
 <p>Region: <%=region%> </p>
 <p>email: <%=email1%> </p>
 <p>Is Active: <%=isActive%> </p>
 <p>email <%=email1%> </p>
 <p>Photo: <img src="<%=photo%>">
-<p>Friendly Name <%=friendlyName %> </p> 
+<p>Friendly Name <%=friendlyName %> </p>
 
 
 

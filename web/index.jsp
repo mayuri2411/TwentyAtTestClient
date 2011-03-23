@@ -11,14 +11,20 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Register Test</title>
+        <title> Test Client</title>
     </head>
     <body>
-        <h3>Check for register....</h3>
+        <h3>Test Client</h3>
         <!--
         <a href="https://20at.rpxnow.com/openid/v2/signin?token_url=http%3A%2F%2Flocalhost%3A8084%2Fsuccess.jsp">Register</a>
         --> 
 
          <a href="https://20at.rpxnow.com/openid/v2/signin?token_url=http://localhost:8084/twentyat-register-test/success.jsp">Register</a>
+
+         &nbsp;&nbsp;&nbsp;
+         
+         <a href="https://20at.rpxnow.com/openid/v2/signin?token_url=http://localhost:8084/twentyat-register-test/login.jsp">Login</a>
+
+         
     </body>
 </html>
